@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/txtHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_45dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/home"
+        android:textColor="@color/white2"
+        android:textSize="@dimen/_34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtExplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_46dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/explore_dog"
+        android:textColor="@color/white3"
+        android:textSize="@dimen/_17sp"
+        app:layout_constraintStart_toStartOf="@id/txtHome"
+        app:layout_constraintTop_toTopOf="@id/txtHome" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:background="@drawable/primary_gradient"
+        android:drawableStart="@drawable/ic_plus"
+        android:drawablePadding="@dimen/_7dp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="@dimen/_15dp"
+        android:paddingVertical="@dimen/_13dp"
+        android:text="@string/book_a_walk"
+        android:textColor="@color/white2"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtExplore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtHome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
