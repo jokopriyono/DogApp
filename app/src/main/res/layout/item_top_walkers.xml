@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/black2">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardWalkers"
+        android:layout_width="198dp"
+        android:layout_height="125dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgWalkers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/mark" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtWalkersName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLength="12"
+        android:text="@string/app_name"
+        android:textColor="@color/white2"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/cardWalkers"
+        app:layout_constraintTop_toBottomOf="@id/cardWalkers" />
+
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="@id/txtLocation"
+        app:layout_constraintStart_toStartOf="@id/txtWalkersName"
+        app:layout_constraintTop_toTopOf="@id/txtLocation" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:maxLength="20"
+        android:text="@string/app_name"
+        android:textColor="@color/white2"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintStart_toEndOf="@id/imgLocation"
+        app:layout_constraintTop_toBottomOf="@id/txtWalkersName" />
+
+    <TextView
+        android:id="@+id/txtFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fee_background"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp"
+        android:text="@string/_5_hr"
+        android:textColor="@color/white2"
+        android:textSize="@dimen/_11sp"
+        app:layout_constraintBottom_toBottomOf="@id/txtLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtWalkersName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

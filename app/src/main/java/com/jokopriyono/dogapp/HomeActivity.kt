@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 import com.jokopriyono.dogapp.data.getDataDummy
 import com.jokopriyono.dogapp.data.getParcelDummy
@@ -36,6 +38,19 @@ class HomeActivity : AppCompatActivity() {
             it.setOnClickListener {
                 startActivity(intent)
             }
+        }
+
+        setupRecyclerView()
+    }
+
+    private fun setupRecyclerView() {
+        val topWalkersAdapter = TopWalkersAdapter(listOf())
+        findViewById<RecyclerView>(R.id.recyclerTopWalkers).apply {
+            val layoutManager = LinearLayoutManager(
+                context, LinearLayoutManager.HORIZONTAL, false
+            )
+            this.layoutManager = layoutManager
+            this.adapter = topWalkersAdapter
         }
     }
 }

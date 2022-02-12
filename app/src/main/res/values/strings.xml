@@ -3,4 +3,7 @@
     <string name="home">Home</string>
     <string name="explore_dog">Explore dog walkers</string>
     <string name="book_a_walk">Book a walk</string>
+    <string name="top_walkers">Top Walkers</string>
+    <string name="view_all"><u>View all</u></string>
+    <string name="_5_hr">$5/hr</string>
 </resources>
